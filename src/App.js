@@ -1,11 +1,12 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import LoginButton from "./components/login";
 import LogoutButton from "./components/logout";
 import { useEffect } from 'react';
 import { gapi } from 'gapi-script';
 
-const clientid = " YOUR CLIENT ID "
+
+const clientid = process.env.CLINTID;
 
 function App() {
 

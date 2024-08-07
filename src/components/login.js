@@ -1,6 +1,6 @@
 import { GoogleLogin } from 'react-google-login' ;
 
-const clientid = " YOUR CLIENT ID "
+const clientid = process.env.CLINTID;
 
 const onSuccess = (res) =>{
     console.log("done", res.profileObj);
@@ -14,7 +14,7 @@ function Login() {
         <div id="signInButton">
             <GoogleLogin
             clientId={clientid}
-            buttonText="Login"
+            buttonText="Continue with Google"
             onSuccess={onSuccess}
             onFailure={onFailure}
             cookiePolicy={'single_host_origin'}
